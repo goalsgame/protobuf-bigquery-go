@@ -1,7 +1,7 @@
 package protobq
 
 import (
-	"github.com/goalsgame/protobuf-bigquery/internal/wkt"
+	"github.com/goalsgame/protobuf-bigquery-go/internal/wkt"
 	"google.golang.org/protobuf/reflect/protoreflect"
 )
 

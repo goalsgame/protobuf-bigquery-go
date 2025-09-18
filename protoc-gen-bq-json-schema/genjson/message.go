@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/goalsgame/protobuf-bigquery/encoding/jsonbq"
+	"github.com/goalsgame/protobuf-bigquery-go/encoding/jsonbq"
 	"google.golang.org/protobuf/compiler/protogen"
 )
 

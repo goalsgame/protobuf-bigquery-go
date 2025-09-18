@@ -208,8 +208,8 @@ const file_einride_bigquery_example_v1_example_recursive_proto_rawDesc = "" +
 	"\x05child\x18\x02 \x01(\v2-.einride.bigquery.example.v1.RecursiveMessageR\x05child\"g\n" +
 	"\x10RecursiveMessage\x12\x0e\n" +
 	"\x02id\x18\x01 \x01(\tR\x02id\x12C\n" +
-	"\x05child\x18\x02 \x01(\v2-.einride.bigquery.example.v1.RecursiveMessageR\x05childB\xb1\x02\n" +
-	"\x1fcom.einride.bigquery.example.v1B\x15ExampleRecursiveProtoP\x01Zhgithub.com/goalsgame/protobuf-bigquery/internal/examples/proto/gen/einride/bigquery/example/v1;examplev1\xa2\x02\x03EBE\xaa\x02\x1bEinride.Bigquery.Example.V1\xca\x02\x1bEinride\\Bigquery\\Example\\V1\xe2\x02'Einride\\Bigquery\\Example\\V1\\GPBMetadata\xea\x02\x1eEinride::Bigquery::Example::V1b\x06proto3"
+	"\x05child\x18\x02 \x01(\v2-.einride.bigquery.example.v1.RecursiveMessageR\x05childB\xb4\x02\n" +
+	"\x1fcom.einride.bigquery.example.v1B\x15ExampleRecursiveProtoP\x01Zkgithub.com/goalsgame/protobuf-bigquery-go/internal/examples/proto/gen/einride/bigquery/example/v1;examplev1\xa2\x02\x03EBE\xaa\x02\x1bEinride.Bigquery.Example.V1\xca\x02\x1bEinride\\Bigquery\\Example\\V1\xe2\x02'Einride\\Bigquery\\Example\\V1\\GPBMetadata\xea\x02\x1eEinride::Bigquery::Example::V1b\x06proto3"
 
 var (
 	file_einride_bigquery_example_v1_example_recursive_proto_rawDescOnce sync.Once

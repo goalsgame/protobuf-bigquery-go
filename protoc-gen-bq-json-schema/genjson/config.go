@@ -3,7 +3,7 @@ package genjson
 import (
 	"flag"
 
-	"github.com/goalsgame/protobuf-bigquery/encoding/protobq"
+	"github.com/goalsgame/protobuf-bigquery-go/encoding/protobq"
 )
 
 type Config struct {

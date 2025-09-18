@@ -3,7 +3,7 @@ package protobq
 import (
 	"testing"
 
-	examplev1 "github.com/goalsgame/protobuf-bigquery/internal/examples/proto/gen/go/einride/bigquery/example/v1"
+	examplev1 "github.com/goalsgame/protobuf-bigquery-go/internal/examples/proto/gen/go/einride/bigquery/example/v1"
 	"google.golang.org/protobuf/reflect/protoreflect"
 	"gotest.tools/v3/assert"
 )
