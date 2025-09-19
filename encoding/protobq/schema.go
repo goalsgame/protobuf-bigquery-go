@@ -81,6 +81,9 @@ func (o SchemaOptions) inferFieldSchema(field protoreflect.FieldDescriptor) *big
 		Description: o.buildDescription(field),
 	}
 	if fieldSchema.Type == bigquery.RecordFieldType && fieldSchema.Schema == nil {
+		if isFieldRecursive(field) {
+			return nil
+		}
 		fieldSchema.Schema = o.InferMessageSchema(field.Message())
 		if len(fieldSchema.Schema) == 0 {
 			return nil

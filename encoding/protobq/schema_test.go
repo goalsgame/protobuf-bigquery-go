@@ -400,6 +400,24 @@ func TestSchemaOptions_InferSchema(t *testing.T) {
 				},
 			},
 		},
+		{
+			name: "examplev1.RecursiveMessageWrapper",
+			msg:  &examplev1.RecursiveMessageWrapper{},
+			expected: bigquery.Schema{
+				{
+					Name: "id",
+					Type: bigquery.StringFieldType,
+				},
+				{
+					Name:     "repeated_recursive_wrapper",
+					Type:     bigquery.RecordFieldType,
+					Repeated: true,
+					Schema: bigquery.Schema{
+						{Name: "id", Type: bigquery.StringFieldType},
+					},
+				},
+			},
+		},
 	} {
 		tt := tt
 		t.Run(tt.name, func(t *testing.T) {

@@ -41,6 +41,9 @@ func (o MarshalOptions) marshalMessage(msg protoreflect.Message) (map[string]big
 	result := make(map[string]bigquery.Value, msg.Descriptor().Fields().Len())
 	var returnErr error
 	msg.Range(func(field protoreflect.FieldDescriptor, value protoreflect.Value) bool {
+		if isFieldRecursive(field) {
+			return true
+		}
 		switch {
 		case field.IsMap():
 			m, err := o.marshalMapValue(field, value)
