@@ -5,8 +5,8 @@ import (
 	"strings"
 
 	"cloud.google.com/go/bigquery"
+	"github.com/goalsgame/protobuf-bigquery-go/internal/wkt"
 	"go.einride.tech/aip/fieldbehavior"
-	"go.einride.tech/protobuf-bigquery/internal/wkt"
 	"google.golang.org/genproto/googleapis/api/annotations"
 	"google.golang.org/protobuf/proto"
 	"google.golang.org/protobuf/reflect/protoreflect"

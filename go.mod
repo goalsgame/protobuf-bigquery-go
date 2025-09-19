@@ -1,4 +1,4 @@
-module go.einride.tech/protobuf-bigquery
+module github.com/goalsgame/protobuf-bigquery-go
 
 go 1.20
 
