@@ -335,6 +335,44 @@ func TestMarshalOptions_Marshal(t *testing.T) {
 			opt:      MarshalOptions{Schema: SchemaOptions{UseOneofFields: true}},
 			expected: map[string]bigquery.Value{},
 		},
+		{
+			name: "RecursiveMessageWrapper",
+			msg: &examplev1.RecursiveMessageWrapper{
+				Id: "1",
+				RecursiveMessage: &examplev1.RecursiveMessage{
+					Id: "2",
+					Child: &examplev1.RecursiveMessage{
+						Id: "3",
+					},
+				},
+				RepeatedRecursiveWrapper: []*examplev1.RecursiveListWrapper{
+					{
+						Id: "4",
+						Child: &examplev1.RecursiveMessage{
+							Id: "5",
+						},
+					},
+				},
+				RepeatedRecursiveMessage: []*examplev1.RecursiveMessage{
+					{
+						Id: "6",
+						Child: &examplev1.RecursiveMessage{
+							Id: "7",
+						},
+					},
+				},
+			},
+			expected: map[string]bigquery.Value{
+				"id": "1",
+				// recursive_message omitted
+				"repeated_recursive_wrapper": []bigquery.Value{
+					map[string]bigquery.Value{
+						"id": string("4"),
+					},
+				},
+				// repeated_recursive_message omitted
+			},
+		},
 	} {
 		tt := tt
 		t.Run(tt.name, func(t *testing.T) {
