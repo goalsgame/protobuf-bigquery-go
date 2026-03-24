@@ -80,6 +80,9 @@ func (o UnmarshalOptions) loadListField(
 	if !bqFieldSchema.Repeated {
 		return fmt.Errorf("%s: unsupported field schema for list field: not repeated", field.Name())
 	}
+	if bqField == nil {
+		return nil
+	}
 	bqList, ok := bqField.([]bigquery.Value)
 	if !ok {
 		return fmt.Errorf("%s: unsupported BigQuery value for message: %v", field.Name(), bqField)
